@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { Suspense , lazy } from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+const Home = lazy(() => import('./routes/Home'));
+const Calculator = lazy(() => import('./routes/Calculator'));
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/calculator">Calculator</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/calculator" component={Calculator} />
+          </Switch>
+        </Suspense>
+      </div>
+    </Router>
   );
 }
-
-export default App;
