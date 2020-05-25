@@ -1,5 +1,4 @@
 import React, { Suspense , lazy } from 'react';
-import './App.css';
 
 import {
   BrowserRouter as Router,
@@ -8,8 +7,13 @@ import {
   Link
 } from "react-router-dom";
 
-const Home = lazy(() => import('./routes/Home'));
-const Calculator = lazy(() => import('./routes/Calculator'));
+import './App.css';
+
+// const Home = lazy(() => import('./routes/Home'));
+// const Calculator = lazy(() => import('./routes/Calculator'));
+
+import Home from './routes/Home';
+import Calculator from './routes/Calculator';
 
 export default function App() {
   return (
@@ -28,7 +32,7 @@ export default function App() {
 
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/calculator" component={Calculator} />
           </Switch>
         </Suspense>
