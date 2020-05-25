@@ -1,1 +1,5 @@
 ### CalculatorButton
+
+```jsx
+<CalculatorButton />
+```
