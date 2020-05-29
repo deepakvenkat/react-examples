@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the calculatorbutton with type: number 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-1 CalculatorButton-root-2 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      1
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;
+
+exports[`renders the calculatorbutton with type: operator 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-3 CalculatorButton-root-4 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      1
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;

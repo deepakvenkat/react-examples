@@ -34,6 +34,7 @@ const CalculatorButton = ({
 
 CalculatorButton.propTypes = {
   classes: PropTypes.shape({}).isRequired,
+  // TODO: if type is number, it should also have a value
   type: PropTypes.oneOf(['number', 'operator']).isRequired,
   text: PropTypes.string.isRequired,
 };
