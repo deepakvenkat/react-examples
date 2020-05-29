@@ -1,0 +1,5 @@
+### Result Area
+
+```jsx
+<ResultArea />
+```

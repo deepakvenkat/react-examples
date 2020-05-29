@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the resultarea 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiInputBase-root ResultArea-root-1"
+  >
+    <input
+      class="MuiInputBase-input"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
