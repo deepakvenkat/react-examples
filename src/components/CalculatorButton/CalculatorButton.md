@@ -1,5 +1,17 @@
 ### CalculatorButton
 
+#### Number
 ```jsx
-<CalculatorButton />
+<CalculatorButton
+  type="number"
+  text="1"
+/>
+```
+
+#### Operator
+```jsx
+<CalculatorButton
+  type="operator"
+  text="+"
+/>
 ```

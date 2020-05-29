@@ -1,8 +1,10 @@
 import React from 'react';
 
+import CalculatorButton from '../../components/CalculatorButton';
+
 const Calculator = () => (
   <div>
-    "Calculator"
+    <CalculatorButton />
   </div>
 );
 
