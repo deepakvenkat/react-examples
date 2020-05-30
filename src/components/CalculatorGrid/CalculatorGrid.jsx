@@ -5,14 +5,76 @@ import { withStyles } from '@material-ui/core/styles';
 
 import CalculatorButton from '../CalculatorButton';
 import ResultArea from '../ResultArea';
+import ClearButton from '../ClearButton';
 
 const styles = {
   root: {},
 };
-const layout = []
+
 const CalculatorGrid = () => (
   <Grid>
     <ResultArea />
+    <div>
+      <ClearButton />
+      <CalculatorButton
+        type="operator"
+        text="/"
+      />
+    </div>
+    <div>
+      <CalculatorButton
+        type="number"
+        text="7"
+      />
+      <CalculatorButton
+        type="number"
+        text="8"
+      />
+      <CalculatorButton
+        type="number"
+        text="9"
+      />
+      <CalculatorButton
+        type="operator"
+        text="-"
+      />
+    </div>
+    <div>
+      <CalculatorButton
+        type="number"
+        text="4"
+      />
+      <CalculatorButton
+        type="number"
+        text="5"
+      />
+      <CalculatorButton
+        type="number"
+        text="6"
+      />
+      <CalculatorButton
+        type="operator"
+        text="+"
+      />
+    </div>
+    <div>
+      <CalculatorButton
+        type="number"
+        text="1"
+      />
+      <CalculatorButton
+        type="number"
+        text="2"
+      />
+      <CalculatorButton
+        type="number"
+        text="3"
+      />
+      <CalculatorButton
+        type="operator"
+        text="="
+      />
+    </div>
   </Grid>
 )
 
