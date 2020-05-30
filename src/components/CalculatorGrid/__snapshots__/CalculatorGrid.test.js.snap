@@ -37,7 +37,7 @@ exports[`renders the resultarea 1`] = `
         <span
           class="MuiButton-label"
         >
-          /
+          AC
         </span>
         <span
           class="MuiTouchRipple-root"
@@ -95,7 +95,7 @@ exports[`renders the resultarea 1`] = `
         <span
           class="MuiButton-label"
         >
-          -
+          +
         </span>
         <span
           class="MuiTouchRipple-root"
@@ -153,7 +153,7 @@ exports[`renders the resultarea 1`] = `
         <span
           class="MuiButton-label"
         >
-          +
+          -
         </span>
         <span
           class="MuiTouchRipple-root"
@@ -211,7 +211,65 @@ exports[`renders the resultarea 1`] = `
         <span
           class="MuiButton-label"
         >
+          *
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-4 CalculatorButton-root-19 MuiButton-disableElevation"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          0
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-4 CalculatorButton-root-20 MuiButton-disableElevation"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          .
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-4 CalculatorButton-root-21 MuiButton-disableElevation"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
           =
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-4 CalculatorButton-root-22 MuiButton-disableElevation"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          /
         </span>
         <span
           class="MuiTouchRipple-root"

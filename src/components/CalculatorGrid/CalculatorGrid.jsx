@@ -18,7 +18,7 @@ const CalculatorGrid = () => (
       <ClearButton />
       <CalculatorButton
         type="operator"
-        text="/"
+        text="AC"
       />
     </div>
     <div>
@@ -36,7 +36,7 @@ const CalculatorGrid = () => (
       />
       <CalculatorButton
         type="operator"
-        text="-"
+        text="+"
       />
     </div>
     <div>
@@ -54,7 +54,7 @@ const CalculatorGrid = () => (
       />
       <CalculatorButton
         type="operator"
-        text="+"
+        text="-"
       />
     </div>
     <div>
@@ -72,7 +72,25 @@ const CalculatorGrid = () => (
       />
       <CalculatorButton
         type="operator"
+        text="*"
+      />
+    </div>
+    <div>
+      <CalculatorButton
+        type="number"
+        text="0"
+      />
+      <CalculatorButton
+        type="number"
+        text="."
+      />
+      <CalculatorButton
+        type="operator"
         text="="
+      />
+      <CalculatorButton
+        type="operator"
+        text="/"
       />
     </div>
   </Grid>
