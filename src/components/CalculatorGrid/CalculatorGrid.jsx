@@ -68,18 +68,18 @@ const CalculatorGrid = () => {
   } = useResultValue();
   return (
     <Grid>
-    <ResultArea
-      value={resultValue}
-    />
-    { layout.map((row) => (
-      <div>
-        <CalculatorRow
-          row={row}
-          key={row[0]}
-          dispatch={dispatch}
-        />
-      </div>
-    ))}
+      <ResultArea
+        value={resultValue}
+      />
+      { layout.map((row) => (
+        <div>
+          <CalculatorRow
+            row={row}
+            key={row[0]}
+            dispatch={dispatch}
+          />
+        </div>
+      ))}
     </Grid>
   );
 };
