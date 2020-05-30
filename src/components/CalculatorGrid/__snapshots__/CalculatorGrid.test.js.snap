@@ -11,7 +11,7 @@ exports[`renders the CalculatorGrid 1`] = `
       <input
         class="MuiInputBase-input"
         type="text"
-        value=""
+        value="0"
       />
     </div>
     <div>
