@@ -16,11 +16,13 @@ const styles = {
 
 const ClearButton = ({
   classes,
+  ...rest
 }) => (
   <CalculatorButton
     type="operator"
     text="clear"
     classes={classes}
+    {...rest}
   />
 );
 

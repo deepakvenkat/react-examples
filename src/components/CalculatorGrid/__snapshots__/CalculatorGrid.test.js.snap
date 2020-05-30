@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the resultarea 1`] = `
+exports[`renders the CalculatorGrid 1`] = `
 <DocumentFragment>
   <div
     class="MuiGrid-root"
@@ -277,5 +277,66 @@ exports[`renders the resultarea 1`] = `
       </button>
     </div>
   </div>
+</DocumentFragment>
+`;
+
+exports[`renders the CalculatorRow 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-23 CalculatorButton-root-24 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      1
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-23 CalculatorButton-root-25 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      2
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-23 CalculatorButton-root-26 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      3
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained CalculatorButton-root-23 CalculatorButton-root-27 MuiButton-disableElevation"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      .
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
 </DocumentFragment>
 `;

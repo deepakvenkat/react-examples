@@ -11,88 +11,57 @@ const styles = {
   root: {},
 };
 
+const buttonCbGenerator = (text) => () => {
+  console.log('in here', text)
+};
+
+export const CalculatorRow = ({ row }) => {
+  const rowDom = row.map((element) => {
+    const onClickFunction = buttonCbGenerator(element);
+    if (typeof element === 'string'){
+      if (element === 'clear') {
+        return <ClearButton onClick={onClickFunction} key="clear"/>;
+      } else {
+        return (
+          <CalculatorButton
+            type="operator"
+            text={element}
+            onClick={onClickFunction}
+            key={element}
+          />
+        )
+      }
+    } else if (typeof element === 'number'){
+      return (
+        <CalculatorButton
+          type="number"
+          text={`${element}`}
+          onClick={onClickFunction}
+          key={element}
+        />
+      )
+    } else {
+      throw new Error('can\'t handle element');
+    }
+  });
+  return rowDom;
+};
+const layout = [
+  ['clear', 'AC'],
+  [7, 8, 9, '+'],
+  [4, 5, 6, '-'],
+  [1, 2, 3, '*'],
+  [0, '.', '=', '/'],
+];
+
 const CalculatorGrid = () => (
   <Grid>
     <ResultArea />
-    <div>
-      <ClearButton />
-      <CalculatorButton
-        type="operator"
-        text="AC"
-      />
-    </div>
-    <div>
-      <CalculatorButton
-        type="number"
-        text="7"
-      />
-      <CalculatorButton
-        type="number"
-        text="8"
-      />
-      <CalculatorButton
-        type="number"
-        text="9"
-      />
-      <CalculatorButton
-        type="operator"
-        text="+"
-      />
-    </div>
-    <div>
-      <CalculatorButton
-        type="number"
-        text="4"
-      />
-      <CalculatorButton
-        type="number"
-        text="5"
-      />
-      <CalculatorButton
-        type="number"
-        text="6"
-      />
-      <CalculatorButton
-        type="operator"
-        text="-"
-      />
-    </div>
-    <div>
-      <CalculatorButton
-        type="number"
-        text="1"
-      />
-      <CalculatorButton
-        type="number"
-        text="2"
-      />
-      <CalculatorButton
-        type="number"
-        text="3"
-      />
-      <CalculatorButton
-        type="operator"
-        text="*"
-      />
-    </div>
-    <div>
-      <CalculatorButton
-        type="number"
-        text="0"
-      />
-      <CalculatorButton
-        type="number"
-        text="."
-      />
-      <CalculatorButton
-        type="operator"
-        text="="
-      />
-      <CalculatorButton
-        type="operator"
-        text="/"
-      />
-    </div>
+    { layout.map((row) => (
+      <div>
+        <CalculatorRow row={row} />
+      </div>
+    ))}
   </Grid>
 )
 

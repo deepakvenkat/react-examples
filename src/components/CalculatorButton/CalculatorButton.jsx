@@ -13,20 +13,20 @@ const styles = {
     border: 'solid 0.5px',
     fontSize: '28px',
     backgroundColor: (props) => ( props.type === 'number' ? 'white' : 'pink'),
-    '&$hover': {
-      backgroundColor: (props) => ( props.type === 'number' ? 'white' : 'pink'),
-    },
   },
 }
 
 const CalculatorButton = ({
   classes,
   text,
+  type,
+  ...rest
 }) => (
   <Button
     variant="contained"
     disableElevation
     className={classes.root}
+    {...rest}
   >
     {text}
   </Button>
