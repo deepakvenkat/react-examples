@@ -27,9 +27,10 @@ const styles = {
   },
 };
 
-const ResultArea = ({ classes }) => (
+const ResultArea = ({ classes, ...rest }) => (
   <InputBase
     classes={classes}
+    {...rest}
   />
 );
 

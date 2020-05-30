@@ -7,17 +7,24 @@ import CalculatorButton from '../CalculatorButton';
 import ResultArea from '../ResultArea';
 import ClearButton from '../ClearButton';
 
+import useResultValue from './hooks/useResultValue';
+
 const styles = {
   root: {},
 };
 
-const buttonCbGenerator = (text) => () => {
-  console.log('in here', text)
+const buttonCbGenerator = (value, dispatch) => () => {
+  dispatch({
+    type: value,
+  });
 };
 
-export const CalculatorRow = ({ row }) => {
+export const CalculatorRow = ({
+  row,
+  dispatch
+}) => {
   const rowDom = row.map((element) => {
-    const onClickFunction = buttonCbGenerator(element);
+    const onClickFunction = buttonCbGenerator(element, dispatch);
     if (typeof element === 'string'){
       if (element === 'clear') {
         return <ClearButton onClick={onClickFunction} key="clear"/>;
@@ -54,16 +61,28 @@ const layout = [
   [0, '.', '=', '/'],
 ];
 
-const CalculatorGrid = () => (
-  <Grid>
-    <ResultArea />
+const CalculatorGrid = () => {
+  const {
+    result: resultValue,
+    dispatch,
+  } = useResultValue();
+  return (
+    <Grid>
+    <ResultArea
+      value={resultValue}
+    />
     { layout.map((row) => (
       <div>
-        <CalculatorRow row={row} />
+        <CalculatorRow
+          row={row}
+          key={row[0]}
+          dispatch={dispatch}
+        />
       </div>
     ))}
-  </Grid>
-)
+    </Grid>
+  );
+};
 
 CalculatorGrid.propTypes = {
   classes: PropTypes.shape({}).isRequired,
