@@ -1,10 +1,10 @@
 import React from 'react';
 
-import CalculatorButton from '../../components/CalculatorButton';
+import CalculatorGrid from '../../components/CalculatorGrid';
 
 const Calculator = () => (
   <div>
-    <CalculatorButton />
+    <CalculatorGrid />
   </div>
 );
 

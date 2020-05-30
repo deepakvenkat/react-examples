@@ -1,0 +1,5 @@
+## ClearButton
+
+```jsx
+<ClearButton />
+```
