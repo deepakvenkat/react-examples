@@ -9,6 +9,9 @@ const operatorFunctions = {
 
 const updateStateWithNumber = (state, value) => {
   const currentNumber = state.operator === null ? state.operand1 : state.operand2;
+  if (currentNumber.length === 10) {
+    return state;
+  }
   const newNumber = `${currentNumber}${value}`;
   return {
     ...state,
@@ -24,7 +27,7 @@ const calculate = (state) => {
   const result = operatorFunctions[operator](
     parseFloat(operand1),
     parseFloat(operand2),
-  );
+  ).toFixed(10);
   return {
     ...state,
     operand1: `${result}`,
