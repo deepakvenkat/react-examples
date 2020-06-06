@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the WeatherCard 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root WeatherCard-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+      >
+        Wed
+      </p>
+      <div
+        class="MuiAvatar-root MuiAvatar-square WeatherIcon-avatar-4 MuiAvatar-colorDefault"
+      >
+        <div
+          class="WeatherIcon-first-3 WeatherIcon-first-5"
+        />
+      </div>
+      <br />
+      <p
+        class="MuiTypography-root WeatherCard-temp-2 MuiTypography-body1"
+      >
+        77/
+      </p>
+      <p
+        class="MuiTypography-root WeatherCard-temp-2 MuiTypography-body1 MuiTypography-colorTextSecondary"
+      >
+        63
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

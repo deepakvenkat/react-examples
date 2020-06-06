@@ -11,13 +11,14 @@ const styles = {
     backgroundImage: (props) => (`url(\'/public/icons/${props.weather}.png\')`),
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
-    backgroundColor: '#fff4f4',
-    height: '100px',
-    width: '100px',
+    backgroundColor: 'rgba(#f6f6f6, 0.1)',
+    height: '75px',
+    width: '75px',
   },
   avatar: {
-    height: '100px',
-    width: '100px',
+    height: '75px',
+    width: '75px',
+    margin: '0 auto',
   },
 };
 
