@@ -20,6 +20,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import Home from './routes/Home';
 import Calculator from './routes/Calculator';
+import Weather from './routes/Weather';
 
 const routes = [{
   link: '/',
@@ -27,6 +28,9 @@ const routes = [{
 }, {
   link: '/calculator',
   text: 'Calculator',
+}, {
+  link: '/weather',
+  text: 'Weather',
 }];
 
 const drawerWidth = 120;
@@ -80,6 +84,7 @@ export default function App() {
                     primary={(
                       <Link to={route.link}>{route.text}</Link>
                     )}
+                    key={route.text}
                   />
                 </ListItem>
               ))
@@ -92,6 +97,7 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/calculator" component={Calculator} />
+              <Route path="/weather" component={Weather} />
             </Switch>
           </Suspense>
         </main>
