@@ -8,7 +8,7 @@ const styles = {
   first: {
     position: 'absolute',
     // clip: rect(top, right, bottom, left)
-    backgroundImage: (props) => (`url(\'/public/icons/${props.weather}.png\')`),
+    backgroundImage: (props) => (`url('/public/icons/${props.weather}.png')`),
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'rgba(#f6f6f6, 0.1)',

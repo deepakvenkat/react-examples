@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   Typography,
-  Button,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -14,6 +13,8 @@ const styles = {
     width: '125px',
     height: '200px',
     textAlign: 'center',
+    borderRadius: 0,
+    display: 'inline-block',
   },
   temp: {
     display: 'inline-block',
