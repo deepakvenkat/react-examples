@@ -1,0 +1,5 @@
+## LocationForm
+
+```jsx
+<LocationForm />
+```
