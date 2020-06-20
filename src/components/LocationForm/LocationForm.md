@@ -1,5 +1,7 @@
 ## LocationForm
 
 ```jsx
-<LocationForm />
+<LocationForm
+  searchZipcode={(zipcode) => console.log(zipcode)}
+/>
 ```

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   TextField,
   Button,
@@ -13,21 +13,62 @@ const styles = {
   }
 };
 
-const LocationForm = ({ classes }) =>  (
-  <form>
-    <TextField label="Zip Code" />
-    <Button
-      disableElevation
-      variant="contained"
-      className={classes.searchButton}
-    >
-      Search
-    </Button>
-  </form>
-);
+const LocationForm = ({ classes, searchZipcode }) =>  {
+  const [zipcode, setZipcode] = useState();
+
+  const onSearch = (e) => {
+    e.preventDefault();
+    if (zipcode.length !== 5) {
+      // TODO: show error
+    }
+    searchZipcode(zipcode);
+  }
+  const inputOnChange = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const value = e.target.value;
+    if(e.key === 'Enter') {
+      // TODO: call callback
+      if (zipcode.length !== 5) {
+        // TODO: show error
+      }
+      searchZipcode(zipcode);
+    } else {
+      // TODO: set zipcode only if it is number;
+      if (value.length <= 5) {
+        setZipcode(e.target.value);
+      }
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.stopPropagation();
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <TextField
+        label="Zip Code"
+        value={zipcode}
+        onChange={inputOnChange}
+        type="number"
+        name="zipcode"
+      />
+      <Button
+        disableElevation
+        variant="contained"
+        className={classes.searchButton}
+        onClick={onSearch}
+      >
+        Search
+      </Button>
+    </form>
+  );
+};
 
 LocationForm.propTypes = {
   classes: PropTypes.shape({}).isRequired,
+  searchZipcode: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(LocationForm);

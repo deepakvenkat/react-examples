@@ -1,9 +1,17 @@
 import React from 'react';
 
-const Weather = () => (
-  <div>
-    Weather
-  </div>
-);
+import WeatherGrid from '../../components/WeatherGrid';
+import LocationForm from '../../components/LocationForm';
+
+const Weather = () => {
+  const searchZipcode = (zipcode) => {
+    console.log(zipcode)
+  };
+  return (
+    <div>
+      <LocationForm searchZipcode={searchZipcode} />
+    </div>
+  );
+};
 
 export default Weather;
