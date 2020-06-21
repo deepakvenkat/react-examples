@@ -3,9 +3,12 @@ import React from 'react';
 import WeatherGrid from '../../components/WeatherGrid';
 import LocationForm from '../../components/LocationForm';
 
+import { getLatAndLong } from '../../api/Zipcode';
+
 const Weather = () => {
-  const searchZipcode = (zipcode) => {
-    console.log(zipcode)
+  const searchZipcode = async (zipcode) => {
+    const resLatLong = await getLatAndLong({ zipcode });
+    // TODO: add error handler
   };
   return (
     <div>

@@ -28,7 +28,7 @@ const LocationForm = ({ classes, searchZipcode }) =>  {
     e.stopPropagation();
     const value = e.target.value;
     if(e.key === 'Enter') {
-      // TODO: call callback
+      // TODO: this is not working
       if (zipcode.length !== 5) {
         // TODO: show error
       }
